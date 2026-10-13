@@ -106,6 +106,19 @@ Bu analitik sistem, **TÜBİTAK 2209-A Üniversite Öğrencileri Araştırma Pro
 st.write("---")
 
 # 4. Üst Temel Metrikler (KPIs)
+
+st.markdown("""
+<style>
+    div[data-testid="stMetricValue"] > div {
+        color: var(--text-color) !important;
+    }
+    div[data-testid="stMetricLabel"] > div {
+        color: var(--text-color) !important;
+        opacity: 0.8;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 col1, col2, col3, col4 = st.columns(4)
 
 total_count = len(filtered_df)
