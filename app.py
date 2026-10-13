@@ -109,12 +109,18 @@ st.write("---")
 
 st.markdown("""
 <style>
-    div[data-testid="stMetricValue"] > div {
+    /* Metrik başlıkları (İncelenen Hasta Kohortu vs.) */
+    [data-testid="stMetricLabel"],
+    [data-testid="stMetricLabel"] * {
         color: var(--text-color) !important;
+        opacity: 0.85 !important;
     }
-    div[data-testid="stMetricLabel"] > div {
+
+    /* Metrik değerleri (150,559 Hasta, 47.7 / 100 vs.) */
+    [data-testid="stMetricValue"],
+    [data-testid="stMetricValue"] * {
         color: var(--text-color) !important;
-        opacity: 0.8;
+        -webkit-text-fill-color: var(--text-color) !important;
     }
 </style>
 """, unsafe_allow_html=True)
